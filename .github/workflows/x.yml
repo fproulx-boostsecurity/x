@@ -6,12 +6,13 @@ on:
 
 jobs:
   test:
+    if: github.actor.login == 'fproulx'
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Thank you ${{ github.event.pusher.email }}"
-      - run: echo "Thank you ${{ github.event.issue.user.email }}"
       - run: echo "Thank you ${{ github.event.commits[0].author.email }}"
-      - run: echo "Thank you ${{ github.event.commits.*.author.email }}"
-      - run: echo "Thank you ${{ github.event.head_commit.author.email }}
+      # - run: echo "Thank you ${{ github.event.pusher.email }}"
+      # # - run: echo "Thank you ${{ github.event.issue.user.email }}"
+      # - run: echo "Thank you ${{ github.event.commits.*.author.email }}"
+      # - run: echo "Thank you ${{ github.event.head_commit.author.email }}
 
       
