@@ -8,7 +8,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Thank you ${{ github.event.commits[0].author.email }}"
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v3
+      # - run: echo "Thank you ${{ github.event.commits[0].author.email }}"
       # - run: echo "Thank you ${{ github.event.pusher.email }}"
       # # - run: echo "Thank you ${{ github.event.issue.user.email }}"
       # - run: echo "Thank you ${{ github.event.commits.*.author.email }}"
