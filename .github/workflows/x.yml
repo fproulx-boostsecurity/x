@@ -8,4 +8,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Thank you ${{ toJSON(github) }}"
+      - run: echo "Thank you ${{ github.event.pusher.email }}"
+
+      
