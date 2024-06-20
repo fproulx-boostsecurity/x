@@ -1,4 +1,5 @@
 on:
+  push:
   issues:
   issue_comment:
   pull_request:
