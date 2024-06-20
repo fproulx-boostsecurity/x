@@ -6,7 +6,6 @@ on:
 
 jobs:
   test:
-    if: github.actor.login == 'fproulx'
     runs-on: ubuntu-latest
     steps:
       - run: echo "Thank you ${{ github.event.commits[0].author.email }}"
